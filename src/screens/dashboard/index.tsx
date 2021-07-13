@@ -2,12 +2,12 @@ import React, { FC } from 'react';
 
 import { Container, Title } from './styles';
 
-const Login: FC = () => {
+const Dashboard: FC = () => {
   return (
     <Container>
-      <Title>Hello Login</Title>
+      <Title>Hello Dashboard</Title>
     </Container>
   );
 };
 
-export default Login;
+export default Dashboard;
