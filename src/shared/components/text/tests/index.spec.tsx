@@ -1,22 +1,18 @@
 import { render } from '@testing-library/react-native';
-import React, { ComponentProps, FC } from 'react';
-import Providers from 'shared/providers';
+import React from 'react';
+import Providers from 'shared/providers/test-providers';
 
-import BaseText from '../index';
-
-const Text: FC<ComponentProps<typeof BaseText>> = props => {
-  return (
-    <Providers>
-      <BaseText {...props} />
-    </Providers>
-  );
-};
+import Text from '../index';
 
 describe('<Text />', () => {
   describe('snapshots', () => {
     it('should match snapshot', () => {
       expect.hasAssertions();
-      const rendered = render(<Text>Hello Text</Text>).toJSON();
+      const rendered = render(
+        <Providers>
+          <Text>Hello Text</Text>
+        </Providers>,
+      ).toJSON();
 
       expect(rendered).toMatchSnapshot();
     });
@@ -25,7 +21,11 @@ describe('<Text />', () => {
   describe('unit', () => {
     it('should render the text', () => {
       expect.hasAssertions();
-      const { queryByText } = render(<Text>Hello Text</Text>);
+      const { queryByText } = render(
+        <Providers>
+          <Text>Hello Text</Text>
+        </Providers>,
+      );
 
       expect(queryByText('Hello Text')).toBeTruthy();
     });

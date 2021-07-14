@@ -1,27 +1,32 @@
 import { render } from '@testing-library/react-native';
 import React from 'react';
+import Text from 'shared/components/text';
 import Providers from 'shared/providers/test-providers';
 
-import Button from '../index';
+import Card from '../index';
 
-describe('<Button />', () => {
+describe('<Card />', () => {
   describe('snapshots', () => {
-    it('should match snapshot on base state', () => {
+    it('should match default snapshot', () => {
       expect.hasAssertions();
       const rendered = render(
         <Providers>
-          <Button text="Hello Button" />
+          <Card>
+            <Text>Hello Card</Text>
+          </Card>
         </Providers>,
       ).toJSON();
 
       expect(rendered).toMatchSnapshot();
     });
 
-    it('should match snapshot dense modifier', () => {
+    it('should match gradient snapshot', () => {
       expect.hasAssertions();
       const rendered = render(
         <Providers>
-          <Button text="Hello Button" dense />
+          <Card gradient>
+            <Text>Hello Card</Text>
+          </Card>
         </Providers>,
       ).toJSON();
 
@@ -32,13 +37,17 @@ describe('<Button />', () => {
   describe('unit', () => {
     it('should render the text', () => {
       expect.hasAssertions();
-      const { getByText } = render(
+      const rendererd = render(
         <Providers>
-          <Button text="Hello Button" />
+          <Card>
+            <Text>Hello Card</Text>
+          </Card>
         </Providers>,
       );
 
-      expect(getByText('Hello Button')).toBeTruthy();
+      console.log(rendererd.debug());
+
+      expect(rendererd.queryByText('Hello Card')).toBeTruthy();
     });
   });
 });

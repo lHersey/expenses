@@ -1,34 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Button /> snapshots should match snapshot 1`] = `
-<View
+exports[`<Button /> snapshots should match snapshot dense modifier 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
   style={
     Array [
       Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexBasis": 0,
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "justifyContent": "center",
+        "flex": 1,
       },
+      undefined,
     ]
   }
 >
-  <Text
+  <View
+    accessible={true}
+    dense={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Array [
         Object {
-          "color": "#3e3e3e",
-          "fontSize": 24,
-        },
-        Object {
-          "fontWeight": "bold",
+          "alignItems": "center",
+          "borderRadius": 15,
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "minWidth": 100,
+          "paddingBottom": 10,
+          "paddingLeft": 7.5,
+          "paddingRight": 7.5,
+          "paddingTop": 10,
         },
       ]
     }
   >
-    Hello Button
-  </Text>
-</View>
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "column",
+          },
+        ]
+      }
+    >
+      <Text
+        dense={true}
+        style={
+          Array [
+            Object {
+              "color": "#3e3e3e",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#FFF",
+            },
+          ]
+        }
+      >
+        Hello Button
+      </Text>
+    </View>
+  </View>
+</RNCSafeAreaProvider>
+`;
+
+exports[`<Button /> snapshots should match snapshot on base state 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 15,
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "minWidth": 100,
+          "paddingBottom": 20,
+          "paddingLeft": 15,
+          "paddingRight": 15,
+          "paddingTop": 20,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "column",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#3e3e3e",
+              "fontSize": 16,
+            },
+            Object {
+              "color": "#FFF",
+            },
+          ]
+        }
+      >
+        Hello Button
+      </Text>
+    </View>
+  </View>
+</RNCSafeAreaProvider>
 `;

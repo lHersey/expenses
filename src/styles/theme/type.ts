@@ -13,4 +13,5 @@ export type Theme = {
   SUCCESS_COLOR: string;
   WARNING_COLOR: string;
   WHITE: string;
+  GRADIENT_BACKGROUND: string[];
 };

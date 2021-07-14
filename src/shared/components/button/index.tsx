@@ -1,12 +1,27 @@
 import React, { FC } from 'react';
+import { IoniconsName } from 'shared/types/icons';
+import { useTheme } from 'styled-components/native';
 
-import { Container, Title } from './styles';
+import { Icon, Label, LabelsContainer, Modifiers, Pressable, Subtitle } from './styles';
 
-const Button: FC = () => {
+type Props = Modifiers & {
+  text: string;
+  subtitle?: string;
+  icon?: IoniconsName;
+};
+
+const Button: FC<Props> = props => {
+  const { text, icon, subtitle, ...modifiers } = props;
+  const theme = useTheme();
+
   return (
-    <Container>
-      <Title>Hello Button</Title>
-    </Container>
+    <Pressable {...modifiers}>
+      <LabelsContainer>
+        {subtitle && <Subtitle>{subtitle}</Subtitle>}
+        <Label {...modifiers}>{text}</Label>
+      </LabelsContainer>
+      {icon && <Icon name={icon} color={theme.WHITE} size={25} />}
+    </Pressable>
   );
 };
 

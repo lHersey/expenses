@@ -8,8 +8,12 @@ const MainStack = createStackNavigator();
 
 const MainStackNavigator: FC = () => {
   return (
-    <MainStack.Navigator initialRouteName={Screens.DASHBOARD_TAB} headerMode="none">
-      <MainStack.Screen name={Screens.HOME} component={MainTabNavigator} />
+    <MainStack.Navigator initialRouteName={Screens.DASHBOARD_TAB}>
+      <MainStack.Screen
+        options={{ title: 'Dashboard', headerTitleAlign: 'left' }}
+        name={Screens.HOME}
+        component={MainTabNavigator}
+      />
     </MainStack.Navigator>
   );
 };

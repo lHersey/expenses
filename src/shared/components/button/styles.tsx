@@ -1,13 +1,54 @@
+import { Ionicons } from '@expo/vector-icons';
 import Text from 'shared/components/text';
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
-export const Container = styled.View`
+export type Modifiers = {
+  primary?: boolean;
+  secondary?: boolean;
+  dense?: boolean;
+};
+
+export const Pressable = styled.Pressable<Modifiers>`
   display: flex;
-  flex: 1;
+  min-width: 100px;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 20px 15px;
+  border-radius: 15px;
+
+  ${p =>
+    p.dense &&
+    css`
+      padding: 10px 7.5px;
+    `}
+
+  ${p =>
+    p.primary &&
+    css`
+      background: ${p.theme.PRIMARY_COLOR};
+    `}
+
+  ${p =>
+    p.secondary &&
+    css`
+      background: ${p.theme.SECONDARY_COLOR};
+    `}
 `;
 
-export const Title = styled(Text)`
-  font-weight: bold;
+export const LabelsContainer = styled.View`
+  flex-direction: column;
+`;
+
+export const Label = styled(Text)`
+  color: ${p => p.theme.WHITE};
+`;
+
+export const Subtitle = styled(Text)`
+  color: ${p => p.theme.WHITE};
+  font-size: 12px;
+`;
+
+export const Icon = styled(Ionicons)`
+  margin-left: 10px;
 `;

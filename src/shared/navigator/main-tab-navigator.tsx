@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import DashboardScreen from 'screens/dashboard';
 import { Screens } from 'shared/constants/screens';
 import { useTabScreenOptions } from 'shared/hooks';
-import { useTheme } from 'styled-components';
+import { useTheme } from 'styled-components/native';
 
 const MainTab = createBottomTabNavigator();
 

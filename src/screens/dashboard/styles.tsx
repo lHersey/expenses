@@ -6,8 +6,10 @@ export const Container = styled.View`
   flex: 1;
   justify-content: center;
   align-items: center;
+  background-color: ${p => p.theme.SECONDARY_BACKGROUND_COLOR};
 `;
 
 export const Title = styled(Text)`
+  color: ${p => p.theme.PRIMARY_COLOR};
   font-weight: bold;
 `;
