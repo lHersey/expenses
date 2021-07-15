@@ -7,7 +7,7 @@ export const ShadowContainer = styled.View`
 
   /* Shadow iOS */
   shadow-color: ${p => p.theme.BLACK_COLOR};
-  shadow-opacity: 0.3px;
+  shadow-opacity: 0.3;
   shadow-radius: 4px;
   shadow-offset: 0px 0px;
 
@@ -16,6 +16,8 @@ export const ShadowContainer = styled.View`
 `;
 
 const backgroundStyles = css`
+  display: flex;
+  flex-grow: 1;
   border-radius: 15px;
   background: ${p => p.theme.MAIN_BACKGROUND_COLOR};
   padding: 15px;

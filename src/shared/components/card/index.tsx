@@ -1,19 +1,22 @@
 import React, { FC } from 'react';
+import { ViewProps } from 'react-native';
 import { useTheme } from 'styled-components/native';
 
 import { Container, Gradient, ShadowContainer } from './styles';
 
-type Props = {
+type Props = ViewProps & {
   gradient?: boolean;
 };
 
+//TODO: Remove as never when the styles types are fixed
+
 const Card: FC<Props> = props => {
-  const { gradient, children } = props;
+  const { gradient, children, ...viewProps } = props;
   const { GRADIENT_BACKGROUND } = useTheme();
 
   if (gradient)
     return (
-      <ShadowContainer>
+      <ShadowContainer {...(viewProps as never)}>
         <Gradient colors={GRADIENT_BACKGROUND} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}>
           {children}
         </Gradient>
@@ -21,7 +24,7 @@ const Card: FC<Props> = props => {
     );
 
   return (
-    <ShadowContainer>
+    <ShadowContainer {...(viewProps as never)}>
       <Container>{children}</Container>
     </ShadowContainer>
   );
