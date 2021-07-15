@@ -35,6 +35,8 @@ exports[`<Card /> snapshots should match default snapshot 1`] = `
           Object {
             "backgroundColor": "#FFF",
             "borderRadius": 15,
+            "display": "flex",
+            "flexGrow": 1,
             "overflow": "hidden",
             "paddingBottom": 15,
             "paddingLeft": 15,
@@ -94,9 +96,9 @@ exports[`<Card /> snapshots should match gradient snapshot 1`] = `
       proxiedProperties={
         Object {
           "colors": Array [
-            4282099686,
-            4292196855,
-            4294349188,
+            4280987875,
+            4292112360,
+            4294874740,
           ],
           "endPoint": Array [
             1,
@@ -114,6 +116,8 @@ exports[`<Card /> snapshots should match gradient snapshot 1`] = `
           Object {
             "backgroundColor": "#FFF",
             "borderRadius": 15,
+            "display": "flex",
+            "flexGrow": 1,
             "overflow": "hidden",
             "paddingBottom": 15,
             "paddingLeft": 15,
