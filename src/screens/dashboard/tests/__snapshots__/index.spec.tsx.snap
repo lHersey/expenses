@@ -16,8 +16,11 @@ exports[`<Dashboard /> snapshots should match snapshot 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "#f1f1f1",
+          "backgroundColor": "#f2f5f7",
           "display": "flex",
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
         },
       ]
     }
@@ -26,292 +29,1939 @@ exports[`<Dashboard /> snapshots should match snapshot 1`] = `
       style={
         Array [
           Object {
-            "elevation": 8,
-            "overflow": "visible",
-            "shadowColor": "#000",
-            "shadowOffset": Object {
-              "height": 0,
-              "width": 0,
-            },
-            "shadowOpacity": 0.3,
-            "shadowRadius": 4,
-          },
-          Object {
-            "display": "flex",
-            "marginBottom": 10,
-            "marginLeft": 10,
-            "marginRight": 10,
-            "marginTop": 10,
+            "paddingBottom": 0,
+            "paddingLeft": 30,
+            "paddingRight": 30,
+            "paddingTop": 30,
           },
         ]
       }
     >
-      <ViewManagerAdapter_ExpoLinearGradient
-        proxiedProperties={
-          Object {
-            "colors": Array [
-              4280987875,
-              4292112360,
-              4294874740,
-            ],
-            "endPoint": Array [
-              1,
-              0,
-            ],
-            "locations": undefined,
-            "startPoint": Array [
-              0,
-              0,
-            ],
-          }
-        }
+      <View
         style={
           Array [
             Object {
-              "backgroundColor": "#FFF",
-              "borderRadius": 15,
-              "display": "flex",
-              "flexGrow": 1,
-              "overflow": "hidden",
-              "paddingBottom": 15,
-              "paddingLeft": 15,
-              "paddingRight": 15,
-              "paddingTop": 15,
+              "overflow": "visible",
             },
           ]
         }
       >
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "marginTop": 10,
-              },
-            ]
-          }
-        >
-          <Text
-            style={
-              Array [
-                Object {
-                  "color": "#3e3e3e",
-                  "fontSize": 16,
-                },
-                Object {
-                  "color": "#e3e3e3",
-                },
-              ]
+        <ViewManagerAdapter_ExpoLinearGradient
+          proxiedProperties={
+            Object {
+              "colors": Array [
+                4280987875,
+                4292112360,
+                4294874740,
+              ],
+              "endPoint": Array [
+                1,
+                0,
+              ],
+              "locations": undefined,
+              "startPoint": Array [
+                0,
+                0,
+              ],
             }
-          >
-            Total Balance
-          </Text>
-        </View>
-        <View
-          style={
-            Array [
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "marginTop": 10,
-              },
-            ]
           }
-        >
-          <Text
-            style={
-              Array [
-                Object {
-                  "color": "#3e3e3e",
-                  "fontSize": 16,
-                },
-                Object {
-                  "color": "#e3e3e3",
-                  "fontSize": 36,
-                  "fontWeight": "600",
-                },
-              ]
-            }
-          >
-            $ 4800.00
-          </Text>
-        </View>
-        <View
           style={
             Array [
               Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "marginTop": 20,
+                "backgroundColor": "#FFF",
+                "borderRadius": 15,
+                "display": "flex",
+                "flexGrow": 1,
+                "overflow": "hidden",
+                "paddingBottom": 15,
+                "paddingLeft": 15,
+                "paddingRight": 15,
+                "paddingTop": 15,
               },
             ]
           }
         >
           <View
-            accessible={true}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Array [
                 Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.15)",
-                  "borderRadius": 10,
+                  "alignItems": "center",
                   "display": "flex",
-                  "flexBasis": 0,
-                  "flexDirection": "row",
-                  "flexGrow": 1,
-                  "flexShrink": 1,
-                  "marginBottom": 10,
-                  "marginLeft": 10,
-                  "marginRight": 10,
                   "marginTop": 10,
-                  "paddingBottom": 10,
-                  "paddingLeft": 10,
-                  "paddingRight": 10,
-                  "paddingTop": 10,
                 },
               ]
             }
           >
-            <Text />
-            <View
+            <Text
               style={
                 Array [
                   Object {
-                    "marginLeft": 10,
+                    "color": "#3e3e3e",
+                    "fontSize": 16,
+                  },
+                  Object {
+                    "color": "#e3e3e3",
                   },
                 ]
               }
             >
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#3e3e3e",
-                      "fontSize": 16,
-                    },
-                    Object {
-                      "color": "#e3e3e3",
-                      "fontSize": 18,
-                      "fontWeight": "bold",
-                    },
-                  ]
-                }
-              >
-                Income
-              </Text>
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#3e3e3e",
-                      "fontSize": 16,
-                    },
-                    Object {
-                      "color": "#e3e3e3",
-                      "fontSize": 14,
-                    },
-                  ]
-                }
-              >
-                $
-                4309
-                .00
-              </Text>
-            </View>
+              Total Balance
+            </Text>
           </View>
           <View
-            accessible={true}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Array [
                 Object {
-                  "backgroundColor": "rgba(255, 255, 255, 0.15)",
-                  "borderRadius": 10,
+                  "alignItems": "center",
                   "display": "flex",
-                  "flexBasis": 0,
-                  "flexDirection": "row",
-                  "flexGrow": 1,
-                  "flexShrink": 1,
-                  "marginBottom": 10,
-                  "marginLeft": 10,
-                  "marginRight": 10,
                   "marginTop": 10,
-                  "paddingBottom": 10,
-                  "paddingLeft": 10,
-                  "paddingRight": 10,
-                  "paddingTop": 10,
                 },
               ]
             }
           >
-            <Text />
-            <View
+            <Text
               style={
                 Array [
                   Object {
-                    "marginLeft": 10,
+                    "color": "#3e3e3e",
+                    "fontSize": 16,
+                  },
+                  Object {
+                    "color": "#e3e3e3",
+                    "fontSize": 36,
+                    "fontWeight": "600",
                   },
                 ]
               }
             >
-              <Text
+              $ 4800.00
+            </Text>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "marginTop": 20,
+                },
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(255, 255, 255, 0.15)",
+                    "borderRadius": 10,
+                    "display": "flex",
+                    "flexBasis": 0,
+                    "flexDirection": "row",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
+                    "marginBottom": 10,
+                    "marginLeft": 10,
+                    "marginRight": 10,
+                    "marginTop": 10,
+                    "paddingBottom": 10,
+                    "paddingLeft": 10,
+                    "paddingRight": 10,
+                    "paddingTop": 10,
+                  },
+                ]
+              }
+            >
+              <Text />
+              <View
                 style={
                   Array [
                     Object {
-                      "color": "#3e3e3e",
-                      "fontSize": 16,
-                    },
-                    Object {
-                      "color": "#e3e3e3",
-                      "fontSize": 18,
-                      "fontWeight": "bold",
+                      "marginLeft": 10,
                     },
                   ]
                 }
               >
-                Expenses
-              </Text>
-              <Text
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e3e3e",
+                        "fontSize": 16,
+                      },
+                      Object {
+                        "color": "#e3e3e3",
+                        "fontSize": 18,
+                        "fontWeight": "bold",
+                      },
+                    ]
+                  }
+                >
+                  Income
+                </Text>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e3e3e",
+                        "fontSize": 16,
+                      },
+                      Object {
+                        "color": "#e3e3e3",
+                        "fontSize": 14,
+                      },
+                    ]
+                  }
+                >
+                  $
+                  4309
+                  .00
+                </Text>
+              </View>
+            </View>
+            <View
+              accessible={true}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "rgba(255, 255, 255, 0.15)",
+                    "borderRadius": 10,
+                    "display": "flex",
+                    "flexBasis": 0,
+                    "flexDirection": "row",
+                    "flexGrow": 1,
+                    "flexShrink": 1,
+                    "marginBottom": 10,
+                    "marginLeft": 10,
+                    "marginRight": 10,
+                    "marginTop": 10,
+                    "paddingBottom": 10,
+                    "paddingLeft": 10,
+                    "paddingRight": 10,
+                    "paddingTop": 10,
+                  },
+                ]
+              }
+            >
+              <Text />
+              <View
                 style={
                   Array [
                     Object {
-                      "color": "#3e3e3e",
-                      "fontSize": 16,
-                    },
-                    Object {
-                      "color": "#e3e3e3",
-                      "fontSize": 14,
+                      "marginLeft": 10,
                     },
                   ]
                 }
               >
-                $
-                400
-                .00
-              </Text>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e3e3e",
+                        "fontSize": 16,
+                      },
+                      Object {
+                        "color": "#e3e3e3",
+                        "fontSize": 18,
+                        "fontWeight": "bold",
+                      },
+                    ]
+                  }
+                >
+                  Expenses
+                </Text>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#3e3e3e",
+                        "fontSize": 16,
+                      },
+                      Object {
+                        "color": "#e3e3e3",
+                        "fontSize": 14,
+                      },
+                    ]
+                  }
+                >
+                  $
+                  400
+                  .00
+                </Text>
+              </View>
+            </View>
+          </View>
+        </ViewManagerAdapter_ExpoLinearGradient>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "display": "flex",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "marginTop": 40,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 20,
+              "paddingBottom": 0,
+              "paddingLeft": 30,
+              "paddingRight": 30,
+              "paddingTop": 0,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#3e3e3e",
+                "fontSize": 16,
+              },
+              Object {
+                "fontSize": 20,
+                "fontWeight": "bold",
+              },
+            ]
+          }
+        >
+          Transactions
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#3e3e3e",
+                "fontSize": 16,
+              },
+              Object {
+                "color": "#b0b0b0",
+                "fontSize": 15,
+              },
+            ]
+          }
+        >
+          View All
+        </Text>
+      </View>
+      <RCTScrollView
+        ItemSeparatorComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "displayName": "Styled(View)",
+            "inlineStyle": InlineStyle {
+              "rules": Array [
+                "
+  margin: 10px 0;
+",
+              ],
+            },
+            "render": [Function],
+            "shouldForwardProp": undefined,
+            "styledComponentId": "StyledNativeComponent",
+            "target": [Function],
+            "withComponent": [Function],
+          }
+        }
+        data={
+          Array [
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+          ]
+        }
+        disableVirtualization={false}
+        getItem={[Function]}
+        getItemCount={[Function]}
+        horizontal={false}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        onContentSizeChange={[Function]}
+        onEndReachedThreshold={2}
+        onLayout={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScroll={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        removeClippedSubviews={false}
+        renderItem={[Function]}
+        scrollEventThrottle={50}
+        stickyHeaderIndices={Array []}
+        style={
+          Array [
+            Object {
+              "paddingBottom": 0,
+              "paddingLeft": 30,
+              "paddingRight": 30,
+              "paddingTop": 0,
+            },
+          ]
+        }
+        updateCellsBatchingPeriod={50}
+        viewabilityConfigCallbackPairs={Array []}
+        windowSize={21}
+      >
+        <View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              highlighted={false}
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 10,
+                  },
+                ]
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              highlighted={false}
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 10,
+                  },
+                ]
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              highlighted={false}
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 10,
+                  },
+                ]
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              highlighted={false}
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 10,
+                  },
+                ]
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              highlighted={false}
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 10,
+                  },
+                ]
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              highlighted={false}
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 10,
+                  },
+                ]
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              highlighted={false}
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 10,
+                  },
+                ]
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              highlighted={false}
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 10,
+                  },
+                ]
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              highlighted={false}
+              style={
+                Array [
+                  Object {
+                    "marginBottom": 10,
+                    "marginLeft": 0,
+                    "marginRight": 0,
+                    "marginTop": 10,
+                  },
+                ]
+              }
+            />
+          </View>
+          <View
+            onLayout={[Function]}
+            style={null}
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "overflow": "visible",
+                  },
+                  Object {
+                    "display": "flex",
+                    "flexDirection": "row",
+                    "justifyContent": "space-between",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 15,
+                      "display": "flex",
+                      "flexGrow": 1,
+                      "overflow": "hidden",
+                      "paddingBottom": 15,
+                      "paddingLeft": 15,
+                      "paddingRight": 15,
+                      "paddingTop": 15,
+                    },
+                    Object {
+                      "display": "flex",
+                      "flexDirection": "row",
+                      "justifyContent": "space-between",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "flexDirection": "row",
+                      },
+                    ]
+                  }
+                >
+                  <ViewManagerAdapter_ExpoLinearGradient
+                    proxiedProperties={
+                      Object {
+                        "colors": Array [
+                          4294944422,
+                          4294011498,
+                        ],
+                        "endPoint": undefined,
+                        "locations": undefined,
+                        "startPoint": undefined,
+                      }
+                    }
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "borderRadius": 25,
+                          "height": 50,
+                          "justifyContent": "center",
+                          "marginRight": 10,
+                          "width": 50,
+                        },
+                      ]
+                    }
+                  >
+                    <Text />
+                  </ViewManagerAdapter_ExpoLinearGradient>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "bold",
+                        },
+                      ]
+                    }
+                    text="Food"
+                  >
+                    Food
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "flex-end",
+                        "justifyContent": "space-around",
+                      },
+                    ]
+                  }
+                >
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    text="$21.4"
+                  >
+                    $21.4
+                  </Text>
+                  <Text
+                    style={
+                      Array [
+                        Object {
+                          "color": "#3e3e3e",
+                          "fontSize": 16,
+                        },
+                        Object {
+                          "color": "#b0b0b0",
+                        },
+                      ]
+                    }
+                    text="Yesterday"
+                  >
+                    Yesterday
+                  </Text>
+                </View>
+              </View>
             </View>
           </View>
         </View>
-      </ViewManagerAdapter_ExpoLinearGradient>
+      </RCTScrollView>
     </View>
   </View>
 </RNCSafeAreaProvider>

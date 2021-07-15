@@ -1,7 +1,10 @@
 import Text from 'shared/components/text';
 import styled from 'styled-components/native';
 
-import Card from '../card';
+export const Container = styled.View`
+  padding: 0 30px;
+  padding-top: 30px;
+`;
 
 export const TextContainer = styled.View`
   margin-top: 10px;
@@ -11,11 +14,6 @@ export const TextContainer = styled.View`
 
 export const Title = styled(Text)`
   color: ${p => p.theme.SECONDARY_TEXT_COLOR};
-`;
-
-export const CardContainer = styled(Card)`
-  display: flex;
-  margin: 10px;
 `;
 
 export const AmmountLabel = styled(Text)`

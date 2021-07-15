@@ -4,15 +4,6 @@ import styled, { css } from 'styled-components/native';
 
 export const ShadowContainer = styled.View`
   overflow: visible;
-
-  /* Shadow iOS */
-  shadow-color: ${p => p.theme.BLACK_COLOR};
-  shadow-opacity: 0.3;
-  shadow-radius: 4px;
-  shadow-offset: 0px 0px;
-
-  /* Shadow Android */
-  elevation: 8;
 `;
 
 const backgroundStyles = css`

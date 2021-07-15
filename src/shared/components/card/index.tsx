@@ -17,7 +17,7 @@ const Card: FC<Props> = props => {
   if (gradient)
     return (
       <ShadowContainer {...(viewProps as never)}>
-        <Gradient colors={GRADIENT_BACKGROUND} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}>
+        <Gradient {...(viewProps as never)} colors={GRADIENT_BACKGROUND} start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}>
           {children}
         </Gradient>
       </ShadowContainer>
@@ -25,7 +25,7 @@ const Card: FC<Props> = props => {
 
   return (
     <ShadowContainer {...(viewProps as never)}>
-      <Container>{children}</Container>
+      <Container {...(viewProps as never)}>{children}</Container>
     </ShadowContainer>
   );
 };
