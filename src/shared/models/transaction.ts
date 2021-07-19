@@ -1,22 +1,16 @@
-import { TransactionType } from 'shared/enum';
-
 class Transaction {
   id: string;
-  date: number;
+  date: string;
   ammount: number;
-  type: TransactionType;
-  accountId: string;
+  note: string;
+  category: string;
 
-  constructor(id: string, date: number, ammount: number, type: TransactionType, accountId: string) {
+  constructor(id: string, date: string, ammount: number, note: string, category: string) {
     this.id = id;
     this.date = date;
     this.ammount = ammount;
-    this.type = type;
-    this.accountId = accountId;
-  }
-
-  isTransfer() {
-    return this.type === TransactionType.TRANSFER;
+    this.note = note;
+    this.category = category;
   }
 }
 

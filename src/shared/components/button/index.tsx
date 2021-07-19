@@ -8,14 +8,15 @@ type Props = Modifiers & {
   text: string;
   subtitle?: string;
   icon?: IoniconsName;
+  onPress?: () => void;
 };
 
 const Button: FC<Props> = props => {
-  const { text, icon, subtitle, ...modifiers } = props;
+  const { text, icon, subtitle, onPress, ...modifiers } = props;
   const theme = useTheme();
 
   return (
-    <Pressable {...modifiers}>
+    <Pressable {...modifiers} onPress={onPress}>
       <LabelsContainer>
         {subtitle && <Subtitle>{subtitle}</Subtitle>}
         <Label {...modifiers}>{text}</Label>

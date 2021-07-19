@@ -7,9 +7,9 @@ type Props = ComponentProps<typeof TextDefault> & {
 };
 
 const Text: FC<Props> = props => {
-  const { text, children } = props;
+  const { text, children, ...rest } = props;
 
-  return <TextDefault {...props}>{text ?? children}</TextDefault>;
+  return <TextDefault {...rest}>{text ?? children}</TextDefault>;
 };
 
 export default Text;

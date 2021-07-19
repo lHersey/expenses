@@ -24,5 +24,5 @@ export const Gradient = styled(LinearGradient)`
 `;
 
 export const Title = styled(Text)`
-  font-weight: bold;
+  font-family: Inter_700;
 `;

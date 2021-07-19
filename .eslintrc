@@ -20,7 +20,9 @@
     "prettier/prettier": "error",
     "simple-import-sort/exports": "error",
     "simple-import-sort/imports": "error",
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "jest/no-hooks": "off"
   },
   "overrides": [
     {
@@ -29,7 +31,8 @@
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/no-unsafe-assignment": "off",
         "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-unsafe-call": "off"
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-empty-function": "off"
       }
     }
   ]

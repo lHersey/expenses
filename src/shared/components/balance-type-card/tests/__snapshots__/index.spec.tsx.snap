@@ -60,13 +60,14 @@ exports[`<BalanceTypeCard /> snapshots should match snapshot 1`] = `
         style={
           Array [
             Object {
-              "color": "#3e3e3e",
+              "color": "#5e5e5e",
+              "fontFamily": "Inter_500",
               "fontSize": 16,
             },
             Object {
               "color": "#e3e3e3",
-              "fontSize": 18,
-              "fontWeight": "bold",
+              "fontFamily": "Inter_700",
+              "fontSize": 14,
             },
           ]
         }
@@ -77,7 +78,8 @@ exports[`<BalanceTypeCard /> snapshots should match snapshot 1`] = `
         style={
           Array [
             Object {
-              "color": "#3e3e3e",
+              "color": "#5e5e5e",
+              "fontFamily": "Inter_500",
               "fontSize": 16,
             },
             Object {

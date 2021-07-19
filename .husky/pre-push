@@ -7,4 +7,3 @@ yarn tsc
 echo 'Running tests...'
 yarn test
 
-exit 1

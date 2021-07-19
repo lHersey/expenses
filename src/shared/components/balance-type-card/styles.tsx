@@ -18,8 +18,8 @@ export const BalanceLabelsContainer = styled.View`
 
 export const BalanceTitle = styled(Text)`
   color: ${p => p.theme.SECONDARY_TEXT_COLOR};
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 14px;
+  font-family: Inter_700;
 `;
 
 export const BalanceAmmount = styled(Text)`

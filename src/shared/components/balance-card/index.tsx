@@ -1,11 +1,15 @@
 import React, { FC } from 'react';
 import { BalanceType } from 'shared/enum';
+import { useExpensesBalanceSelector, useIncomeBalanceSelector } from 'shared/store/selectors/balanceSelectors';
 
 import BalanceTypeCard from '../balance-type-card';
 import Card from '../card';
 import { AmmountLabel, BalanceTypeContainer, Container, TextContainer, Title } from './styles';
 
 const BalanceCard: FC = () => {
+  const expensesAmmount = useExpensesBalanceSelector();
+  const incomeAmmount = useIncomeBalanceSelector();
+
   return (
     <Container>
       <Card gradient>
@@ -13,11 +17,11 @@ const BalanceCard: FC = () => {
           <Title>Total Balance</Title>
         </TextContainer>
         <TextContainer>
-          <AmmountLabel>$ 4800.00</AmmountLabel>
+          <AmmountLabel>${incomeAmmount - expensesAmmount}</AmmountLabel>
         </TextContainer>
         <BalanceTypeContainer>
-          <BalanceTypeCard type={BalanceType.INCOME} ammount={4309} />
-          <BalanceTypeCard type={BalanceType.EXPENSE} ammount={400} />
+          <BalanceTypeCard type={BalanceType.INCOME} ammount={incomeAmmount} />
+          <BalanceTypeCard type={BalanceType.EXPENSE} ammount={expensesAmmount} />
         </BalanceTypeContainer>
       </Card>
     </Container>

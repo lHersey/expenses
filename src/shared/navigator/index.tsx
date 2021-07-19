@@ -1,12 +1,12 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React, { FC } from 'react';
 
-import MainStackNavigator from './main-stack-navigator';
+import MainTabNavigator from './main-tab-navigator';
 
 const Navigator: FC = () => {
   return (
     <NavigationContainer>
-      <MainStackNavigator />
+      <MainTabNavigator />
     </NavigationContainer>
   );
 };

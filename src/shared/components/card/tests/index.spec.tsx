@@ -45,8 +45,6 @@ describe('<Card />', () => {
         </Providers>,
       );
 
-      console.log(rendererd.debug());
-
       expect(rendererd.queryByText('Hello Card')).toBeTruthy();
     });
   });

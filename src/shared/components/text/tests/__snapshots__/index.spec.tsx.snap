@@ -16,7 +16,8 @@ exports[`<Text /> snapshots should match snapshot 1`] = `
     style={
       Array [
         Object {
-          "color": "#3e3e3e",
+          "color": "#5e5e5e",
+          "fontFamily": "Inter_500",
           "fontSize": 16,
         },
       ]

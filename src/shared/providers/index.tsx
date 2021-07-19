@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import FlashMessage from 'react-native-flash-message';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider as StoreProvider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -14,7 +15,10 @@ const Providers: FC = props => {
     <StoreProvider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ThemeProvider theme={THEME}>
-          <SafeAreaProvider>{children}</SafeAreaProvider>
+          <SafeAreaProvider>
+            <FlashMessage position="center" />
+            {children}
+          </SafeAreaProvider>
         </ThemeProvider>
       </PersistGate>
     </StoreProvider>

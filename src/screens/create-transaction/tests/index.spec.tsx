@@ -1,16 +1,25 @@
 import { render } from '@testing-library/react-native';
+import MockDate from 'mockdate';
 import React from 'react';
 import Providers from 'shared/providers/test-providers';
 
-import TransactionItem from '../index';
+import CreateTransaction from '../index';
 
-describe('<TransactionItem />', () => {
+describe('<CreateTransaction />', () => {
+  beforeAll(() => {
+    MockDate.set('2021-07-19T18:54:59.152Z');
+  });
+
+  afterAll(() => {
+    MockDate.reset();
+  });
+
   describe('snapshots', () => {
     it('should match snapshot', () => {
       expect.hasAssertions();
       const rendered = render(
         <Providers>
-          <TransactionItem />
+          <CreateTransaction />
         </Providers>,
       ).toJSON();
 

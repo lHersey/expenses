@@ -24,7 +24,7 @@ export const Diviver = styled.View`
 `;
 
 export const Title = styled(Text)`
-  font-weight: bold;
+  font-family: Inter_700;
   font-size: 20px;
 `;
 

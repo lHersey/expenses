@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react-native';
+import { fireEvent, render } from '@testing-library/react-native';
 import React from 'react';
 import Providers from 'shared/providers/test-providers';
 
@@ -39,6 +39,22 @@ describe('<Button />', () => {
       );
 
       expect(getByText('Hello Button')).toBeTruthy();
+    });
+
+    it('should handle onPress event', () => {
+      expect.hasAssertions();
+
+      const handleOnPressMock = jest.fn();
+
+      const { getByText } = render(
+        <Providers>
+          <Button text="Hello Button" onPress={handleOnPressMock} />
+        </Providers>,
+      );
+
+      fireEvent.press(getByText('Hello Button'));
+
+      expect(handleOnPressMock).toHaveBeenCalledWith();
     });
   });
 });

@@ -18,7 +18,7 @@ export const Title = styled(Text)`
 
 export const AmmountLabel = styled(Text)`
   color: ${p => p.theme.SECONDARY_TEXT_COLOR};
-  font-weight: 600;
+  font-family: Inter_600;
   font-size: 36px;
 `;
 

@@ -25,7 +25,7 @@ export const IconOverlay = styled(LinearGradient)`
 `;
 
 export const CategoryName = styled(Text)`
-  font-weight: bold;
+  font-family: Inter_700;
 `;
 
 export const ValuesContainer = styled.View`
@@ -34,7 +34,8 @@ export const ValuesContainer = styled.View`
 `;
 
 export const AmmountLabel = styled(Text)`
-  font-weight: 500;
+  font-family: Inter_400;
+  color: ${p => p.theme.ACCENT_COLOR};
 `;
 
 export const DateLabel = styled(Text)`

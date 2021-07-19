@@ -8,6 +8,7 @@ export type Theme = {
   PRIMARY_COLOR: string;
   PRIMARY_TEXT_COLOR_COLOR: string;
   SECONDARY_BACKGROUND_COLOR: string;
+  TEXT_COLOR_GRAY: string;
   SECONDARY_COLOR: string;
   SECONDARY_TEXT_COLOR: string;
   SUCCESS_COLOR: string;
