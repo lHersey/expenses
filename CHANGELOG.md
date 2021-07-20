@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1-rc.0](https://github.com/lHersey/expenses/compare/v1.1.0...v1.1.1-rc.0) (2021-07-20)
+
+
+### Bug Fixes
+
+* remove get-latest-tag action ([e014c42](https://github.com/lHersey/expenses/commit/e014c42bcdd3c2b7cd7420e1efa48ab1c0cc6bbf))
+
 ## [1.1.0](https://github.com/lHersey/expenses/compare/v1.1.0-rc.3...v1.1.0) (2021-07-20)
 
 
