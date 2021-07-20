@@ -38,6 +38,9 @@ jobs:
       - name: 'Release to RC'
         run: expo publish --non-interactive --release-channel rc
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          branch: master
+        uses: repo-sync/pull-request@v2
+        with: # If blank, default: triggered branch            # If blank, default: master
+          pr_title: 'release: next release into master' # Title of pull request
+          pr_body: ':crown: *An automated PR*' # Full markdown support, requires pr_title to be set
+          pr_label: 'auto-pr' # Comma-separated list (no spaces)
+          github_token: ${{ secrets.GITHUB_TOKEN }}
