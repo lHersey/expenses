@@ -47,7 +47,7 @@ exports[`<CreateTransaction /> snapshots should match snapshot 1`] = `
         ]
       }
     >
-      New Transaction
+      Create Transaction
     </Text>
     <View
       style={

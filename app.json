@@ -2,7 +2,7 @@
   "expo": {
     "name": "Expenses",
     "slug": "expenses",
-    "version": "1.0.0",
+    "version": "1.1.1-rc.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -16,14 +16,14 @@
     "assetBundlePatterns": ["**/*"],
     "android": {
       "package": "com.lhersey.expenses",
-      "versionCode": 1,
+      "versionCode": 7,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       }
     },
     "ios": {
-      "buildNumber": "1.0.0.0",
+      "buildNumber": "1.1.1.0",
       "bundleIdentifier": "com.lhersey.expenses",
       "supportsTablet": false
     }
