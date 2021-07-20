@@ -55,7 +55,7 @@ exports[`<Dashboard /> snapshots should match snapshot 1`] = `
           ]
         }
       >
-        Welcome to expenses!
+        Welcome to Edify
       </Text>
     </View>
     <View
