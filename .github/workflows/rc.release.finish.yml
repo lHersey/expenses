@@ -43,12 +43,11 @@ jobs:
           branch: ${{ github.event.pull_request.head.ref }}
           tags: true
       - name: Get latest version
-        uses: actions-ecosystem/action-get-latest-tag@v1
-        id: get-latest-tag
+        run: echo "RELEASE_TAG=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_ENV
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.get-latest-tag.outputs.tag }}
+          tag_name: ${{ env.RELEASE_TAG }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Merge into master
