@@ -1,0 +1,12 @@
+diff --git a/node_modules/standard-version-expo/build/bumpers/ios-version.js b/node_modules/standard-version-expo/build/bumpers/ios-version.js
+index 2a899fb..63e15d6 100644
+--- a/node_modules/standard-version-expo/build/bumpers/ios-version.js
++++ b/node_modules/standard-version-expo/build/bumpers/ios-version.js
+@@ -12,6 +12,6 @@ exports.readVersion = helpers_1.iosVersionReader;
+ exports.writeVersion = (contents, version) => {
+     const manifest = expo_1.parse(contents);
+     manifest.expo.ios = manifest.expo.ios || {};
+-    manifest.expo.ios.buildNumber = version;
++    manifest.expo.ios.buildNumber = version.replace(/(-(.)*(\.))|(-)/, ".");
+     return expo_1.serialize(manifest, contents);
+ };

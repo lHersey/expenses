@@ -1,0 +1,20 @@
+name: 'Publish production version'
+
+on:
+  push:
+    branches: [master]
+
+env:
+  CACHE_NAME: 'CACHE_NODE_MODULES'
+  NODE_VERSION: '12.x'
+
+jobs:
+  deploy-alpha-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Get last rc publish'
+        id: publish
+        run: echo "::set-output name publish-id::$(expo publish:history --release-channel rc --count 1 --raw)"
+      - name: 'Set publish id on production'
+        run: expo publish:set --release-channel production --publish-id ${{fromJSON(steps.publish.outputs).queryResult[0].publicationId}}
+
