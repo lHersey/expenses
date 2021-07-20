@@ -6,7 +6,7 @@ on:
 
 env:
   CACHE_NAME: 'CACHE_NODE_MODULES'
-  NODE_VERSION: '12.x'
+  NODE_VERSION: '12'
 
 jobs:
   deploy-rc-version:
@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
       - uses: fregante/setup-git-user@v1
         with:
           node-version: ${{ env.NODE_VERSION }}

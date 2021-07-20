@@ -7,7 +7,7 @@ on:
 
 env:
   CACHE_NAME: 'CACHE_NODE_MODULES'
-  NODE_VERSION: '12.x'
+  NODE_VERSION: '12'
 
 jobs:
   create-tag-and-merge:
@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
       - uses: fregante/setup-git-user@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: 'Get yarn cache path'
