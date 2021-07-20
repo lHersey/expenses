@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.1.0 (2021-07-20)
+
+
+### Bug Fixes
+
+* fix release finish action ([931ff71](https://github.com/lHersey/expenses/commit/931ff71ea52df4a013b8c9c2609c5f6447d2ee69))
+
 ## 1.1.0-rc.0 (2021-07-20)
 
 
