@@ -1,0 +1,43 @@
+name: 'Create release candidate'
+
+on:
+  push:
+    branches: [release/*]
+
+env:
+  CACHE_NAME: 'CACHE_NODE_MODULES'
+  NODE_VERSION: '12.x'
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - uses: expo/expo-github-action@v6
+        with:
+          expo-version: 4.x
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: 'Get yarn cache path'
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> $GITHUB_ENV
+      - uses: actions/cache@v2
+        with:
+          path: ${{ env.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-build-${{ env.CACHE_NAME }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-   
+            ${{ runner.os }}-build- 
+            ${{ runner.os }}-
+      - name: 'Install packages'
+        run: yarn --frozen-lockfile --prefer-offline
+      - name: 'Release to RC'
+        run: expo publish --non-interactive --release-channel rc
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          branch: master
