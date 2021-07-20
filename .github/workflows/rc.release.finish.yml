@@ -10,7 +10,7 @@ env:
   NODE_VERSION: '12.x'
 
 jobs:
-  deploy-production-version:
+  create-tag-and-merge:
     runs-on: ubuntu-latest
     if: startsWith(github.head_ref, 'release/') && contains(github.event.label.name, 'release/finish')
     steps:
