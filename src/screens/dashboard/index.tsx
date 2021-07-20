@@ -13,7 +13,7 @@ const Dashboard: FC = () => {
     <Container>
       <Block>
         <Ionicons name="bar-chart" color={theme.PRIMARY_COLOR} size={24} />
-        <Title text="Welcome to expenses!" />
+        <Title text="Welcome to Edify" />
       </Block>
       <BalanceCard />
       <TransactionList />
