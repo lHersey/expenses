@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0-rc.2](https://github.com/lHersey/expenses/compare/v1.1.0-rc.1...v1.1.0-rc.2) (2021-07-20)
+
+
+### Bug Fixes
+
+* remove duplicated setup-node action ([cdb0771](https://github.com/lHersey/expenses/commit/cdb07714d69ee75e27fb89372e4a003615000404))
+* update transaction title ([2fc4af8](https://github.com/lHersey/expenses/commit/2fc4af875e300cf0886a3f24861ed9089c83becb))
+* use PAT to automerge ([62f6f4f](https://github.com/lHersey/expenses/commit/62f6f4fb065a5c0b5151e933c948aac76b5f8d36))
+
 ## 1.1.0-rc.1 (2021-07-20)
 
 
