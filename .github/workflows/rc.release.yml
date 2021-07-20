@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ env.NODE_VERSION }}
@@ -32,8 +34,27 @@ jobs:
             ${{ runner.os }}-
       - name: 'Install packages'
         run: yarn --frozen-lockfile --prefer-offline
+      - name: 'Validate typings'
+        run: yarn tsc
+      - name: 'Test'
+        run: yarn test:ci
       - name: Bump version
-        run: yarn prerelease --skip.commit --skip.tag
+        run: yarn prerelease --skip.commit
+      - name: Get latest version
+        uses: actions-ecosystem/action-get-latest-tag@v1
+        id: get-latest-tag
+      - name: Push tags
+        uses: actions-ecosystem/action-push-tag@v1
+        with:
+          tag: ${{ steps.get-latest-tag.outputs.tag }}
+          message: '${{ steps.get-latest-tag.outputs.tag }}: PR #${{ github.event.pull_request.number }} ${{ github.event.pull_request.title }}'
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          prerelease: true
+          tag_name: ${{ steps.get-latest-tag.outputs.tag }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Release to RC'
         run: expo publish --non-interactive --release-channel rc
       - name: Create Pull Request
