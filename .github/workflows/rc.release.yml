@@ -23,7 +23,7 @@ jobs:
         with:
           expo-version: 4.x
           token: ${{ secrets.EXPO_TOKEN }}
-          expo-cache: true 
+          expo-cache: true
       - name: 'Get yarn cache path'
         run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> $GITHUB_ENV
       - uses: actions/cache@v2
@@ -41,7 +41,13 @@ jobs:
       - name: 'Test'
         run: yarn test:ci
       - name: Bump version
-        run: yarn prerelease --skip.commit
+        run: yarn prerelease
+      - name: Push bumb version and tag
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          tags: true
       - name: Get latest version
         uses: actions-ecosystem/action-get-latest-tag@v1
         id: get-latest-tag
