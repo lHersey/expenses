@@ -42,7 +42,7 @@ jobs:
         run: yarn test:ci
       - name: Bump version
         run: yarn prerelease
-      - name: Push bumb version and tag
+      - name: Push bump version and tag
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
