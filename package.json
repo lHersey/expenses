@@ -1,14 +1,17 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "version": "1.0.0",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
     "test": "jest --silent",
+    "test:ci": "jest --ci",
     "generate": "plop --plopfile internals/generators/index.js",
     "prepare": "husky install",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "prerelease": "yarn standard-version --prerelease rc"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.0",
@@ -67,6 +70,8 @@
     "patch-package": "^6.4.7",
     "plop": "^2.7.4",
     "prettier": "^2.3.2",
+    "standard-version": "^9.3.1",
+    "standard-version-expo": "^1.0.3",
     "typescript": "~4.0.0",
     "typescript-styled-plugin": "^0.18.0"
   },
