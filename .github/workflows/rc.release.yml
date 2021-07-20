@@ -32,12 +32,14 @@ jobs:
             ${{ runner.os }}-
       - name: 'Install packages'
         run: yarn --frozen-lockfile --prefer-offline
+      - name: Bump version
+        run: yarn prerelease --skip.commit --skip.tag
       - name: 'Release to RC'
         run: expo publish --non-interactive --release-channel rc
       - name: Create Pull Request
         uses: repo-sync/pull-request@v2
-        with: # If blank, default: triggered branch            # If blank, default: master
-          pr_title: 'release: next release into master' # Title of pull request
-          pr_body: ':crown: *Automated PR for release candidate*' # Full markdown support, requires pr_title to be set
-          pr_label: 'auto-pr' # Comma-separated list (no spaces)
+        with:
+          pr_title: 'release: next release into master'
+          pr_body: ':crown: *Automated PR for release candidate*'
+          pr_label: 'auto-pr'
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -17,6 +17,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+          persist-credentials: false
       - uses: fregante/setup-git-user@v1
       - uses: actions/setup-node@v1
         with:
@@ -34,9 +35,19 @@ jobs:
       - name: 'Install packages'
         run: yarn --frozen-lockfile --prefer-offline
       - name: 'Create tag and bump version'
-          yarn standard-version
-          MERGE_METHOD: squash
-          MERGE_COMMIT_MESSAGE: pull-request-title
+        run: yarn standard-version
+      - name: Push changes and tag
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          tags: true
+      - name: Merge into master
+        uses: "pascalgn/automerge-action@v0.14.2"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_LABELS: release/finish
+          MERGE_METHOD: rebase
           MERGE_DELETE_BRANCH: true
-          MERGE_LABELS: "release/finish"
+
 
