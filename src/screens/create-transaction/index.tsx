@@ -17,7 +17,7 @@ const CreateTransaction: FC = () => {
 
   return (
     <Container>
-      <Title>New Transaction</Title>
+      <Title>Create Transaction</Title>
       <CurrencyInput onChangeValue={setAmount} value={ammount} />
       <NotePickerItem value={notes} onChange={setNotes} />
       <CategoryPickerItem value={category} onAccept={setCategory} />
