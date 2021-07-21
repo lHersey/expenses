@@ -1,0 +1,39 @@
+name: 'Trigger alpha build'
+
+on:
+  workflow_dispatch:
+    branches: [develop]
+
+env:
+  CACHE_NAME: 'CACHE_NODE_MODULES'
+  NODE_VERSION: '12'
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - uses: expo/expo-github-action@v6
+        with:
+          expo-version: 4.x
+          token: ${{ secrets.EXPO_TOKEN }}
+          expo-cache: true 
+      - name: 'Get yarn cache path'
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> $GITHUB_ENV
+      - uses: actions/cache@v2
+        with:
+          path: ${{ env.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-build-${{ env.CACHE_NAME }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-   
+            ${{ runner.os }}-build- 
+            ${{ runner.os }}-
+      - name: 'Install packages'
+        run: yarn --frozen-lockfile --prefer-offline
+      - name: 'Check problems with expo'
+        run: expo doctor
+      - name: Schedule alpha build
+        run: expo build:android --release-channel alpha --no-wait --non-interactive --no-publish

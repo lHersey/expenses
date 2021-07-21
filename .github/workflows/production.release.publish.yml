@@ -1,0 +1,39 @@
+name: 'Publish production version'
+
+on:
+  push:
+    branches: [master]
+
+env:
+  CACHE_NAME: 'CACHE_NODE_MODULES'
+  NODE_VERSION: '12'
+
+jobs:
+  deploy-production-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: 'Get yarn cache path'
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> $GITHUB_ENV
+      - uses: actions/cache@v2
+        with:
+          path: ${{ env.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-build-${{ env.CACHE_NAME }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-   
+            ${{ runner.os }}-build- 
+            ${{ runner.os }}-
+      - name: 'Install packages'
+        run: yarn --frozen-lockfile --prefer-offline
+      - uses: expo/expo-github-action@v6
+        with:
+          expo-version: 4.x
+          token: ${{ secrets.EXPO_TOKEN }}
+          expo-cache: true
+      - name: 'Release to Production'
+        run: EXPO_USE_DEV_SERVER=true expo publish --non-interactive --release-channel production
+
+

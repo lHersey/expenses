@@ -1,0 +1,61 @@
+name: 'Close release candidate'
+
+on:
+  pull_request:
+    types: [labeled]
+    branches: [master]
+
+env:
+  CACHE_NAME: 'CACHE_NODE_MODULES'
+  NODE_VERSION: '12'
+
+jobs:
+  create-tag-and-merge:
+    runs-on: ubuntu-latest
+    if: startsWith(github.head_ref, 'release/') && contains(github.event.label.name, 'release/finish')
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: fregante/setup-git-user@v1
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: 'Get yarn cache path'
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> $GITHUB_ENV
+      - uses: actions/cache@v2
+        with:
+          path: ${{ env.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-build-${{ env.CACHE_NAME }}-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-   
+            ${{ runner.os }}-build- 
+            ${{ runner.os }}-
+      - name: 'Install packages'
+        run: yarn --frozen-lockfile --prefer-offline
+      - name: 'Create tag and bump version'
+        run: yarn standard-version
+      - name: Push bump version and tag
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.event.pull_request.head.ref }}
+          tags: true
+      - name: Get latest version
+        run: echo "RELEASE_TAG=`echo $(git describe --tags --abbrev=0)`" >> $GITHUB_ENV
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.RELEASE_TAG }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge into master
+        uses: "pascalgn/automerge-action@v0.14.2"
+        env:
+          GITHUB_TOKEN: "${{ secrets.PAT }}"
+          MERGE_LABELS: release/finish
+          MERGE_METHOD: rebase
+          MERGE_DELETE_BRANCH: true
+
+
